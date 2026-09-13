@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Environment & Dependencies
+.env
+.env.local
+.env.*.local
+.venv/
+venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data & Database
+data/raw/
+data/processed/*.db
+data/processed/*.sqlite
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment-specific files
+.env.db
+.env.production
+.env.development
+
+# OS & Editor
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+.netbeans/
+
+# Generated Reports & Cache
+reports/*.pdf
+reports/*.xlsx
+*.tmp
+.cache/
+.pytest_cache/
+htmlcov/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.bak
+*.swp
+*~
