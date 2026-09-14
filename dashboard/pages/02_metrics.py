@@ -18,11 +18,11 @@ from src.db_connect import get_engine
 
 st.set_page_config(
     page_title="Metrics Dashboard",
-    page_icon="📊",
+    page_icon="📊"  # Metrics dashboard
     layout="wide"
 )
 
-st.title("📊 Marketplace Metrics Dashboard")
+st.title("Marketplace Metrics Dashboard")
 st.markdown("Comprehensive KPI analysis and performance tracking")
 
 # Cache functions
@@ -61,7 +61,7 @@ df_orders = df_orders.merge(order_gmv, on='order_id', how='left')
 delivered = df_orders[df_orders['order_status'] == 'delivered'].copy()
 
 # Sidebar date filter
-st.sidebar.header("⚙️ Filters")
+st.sidebar.header("Filters")
 date_range = st.sidebar.date_input(
     "Select Date Range",
     value=(df_orders['order_purchase_timestamp'].min().date(),
@@ -76,7 +76,7 @@ delivered_filtered = df_filtered[df_filtered['order_status'] == 'delivered'].cop
 # ============================================================================
 # MONTHLY KPI SCORECARD
 # ============================================================================
-st.header("📈 Monthly KPI Scorecard")
+st.header("Monthly KPI Scorecard")
 
 # Prepare monthly data
 df_filtered['order_month'] = df_filtered['order_purchase_timestamp'].dt.to_period('M').astype(str)
@@ -97,7 +97,7 @@ st.dataframe(monthly_kpis, use_container_width=True, hide_index=True)
 # PERFORMANCE CHARTS
 # ============================================================================
 st.divider()
-st.subheader("📊 Key Metrics Trends")
+st.subheader("Key Metrics Trends")
 
 col1, col2 = st.columns(2)
 

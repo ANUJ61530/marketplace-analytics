@@ -66,7 +66,7 @@ delivered['order_month'] = delivered['order_purchase_timestamp'].dt.strftime('%Y
 # ============================================================================
 # PERIOD SELECTION
 # ============================================================================
-st.sidebar.header("⚙️ RCA Configuration")
+st.sidebar.header("RCA Configuration")
 
 # Get available months
 available_months = sorted(delivered['order_month'].unique())
@@ -127,7 +127,7 @@ t1_metrics = calculate_metrics(t1_data)
 # ============================================================================
 # DECOMPOSITION ANALYSIS
 # ============================================================================
-st.header(f"📊 Comparing {t0_month} (T0) vs {t1_month} (T1)")
+st.header(f"Comparing {t0_month} (T0) vs {t1_month} (T1)")
 
 # Extract key values
 u0, f0, aov0, gmv0 = t0_metrics['active_users'], t0_metrics['order_frequency'], t0_metrics['aov'], t0_metrics['total_gmv']
@@ -178,14 +178,14 @@ st.divider()
 if delta_gmv < 0:
     st.error(f"⚠️ **REVENUE DECLINE**: GMV decreased by BRL {abs(delta_gmv):,.2f} ({pct_gmv_change:.2f}%)")
 elif delta_gmv > 0:
-    st.success(f"✅ **REVENUE GROWTH**: GMV increased by BRL {delta_gmv:,.2f} ({pct_gmv_change:.2f}%)")
+    st.success(f"**REVENUE GROWTH**: GMV increased by BRL {delta_gmv:,.2f} ({pct_gmv_change:.2f}%)")
 else:
     st.info(f"⚪ **NO CHANGE**: GMV remained stable")
 
 # ============================================================================
 # CONTRIBUTION ANALYSIS
 # ============================================================================
-st.subheader("📈 Factor Impact Analysis")
+st.subheader("Factor Impact Analysis")
 
 # Calculate individual contributions using additive decomposition
 user_contribution = delta_u * f0 * aov0
@@ -235,7 +235,7 @@ with col2:
 # DETAILED COMPARISON TABLE
 # ============================================================================
 st.divider()
-st.subheader("📊 Detailed Metric Comparison")
+st.subheader("Detailed Metric Comparison")
 
 comparison_table = pd.DataFrame({
     'Metric': [
@@ -367,7 +367,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown(f"""
-    ### 🎯 Key Finding
+    ### Key Finding
     
     **Primary Driver:** {primary_driver}
     - Contribution: BRL {effects[primary_driver]:,.2f}

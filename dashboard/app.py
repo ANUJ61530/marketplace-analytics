@@ -9,7 +9,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Marketplace Analytics Platform",
-    page_icon="📊",
+    page_icon="📊"  # Main app
     layout="wide"
 )
 
@@ -20,7 +20,7 @@ Welcome to the comprehensive analytics platform for monitoring and analyzing
 food delivery marketplace performance. Use the sidebar navigation to explore 
 different analytical views.
 
-## 📊 Available Dashboards
+## Available Dashboards
 
 ### 1. **Overview Dashboard**
 Get a high-level view of marketplace health with key metrics, orders trends, 
@@ -127,7 +127,7 @@ Identify which factors drove revenue changes and their segment-level impacts.
 
 ---
 
-## 📊 Dashboards Overview
+## Dashboards Overview
 
 ### Overview Dashboard
 **Best for**: Executive summary and quick insights
@@ -192,7 +192,7 @@ The system uses a star schema design optimized for analytics:
 
 ---
 
-## 📈 Sample Insights from This Dataset
+## Sample Insights from This Dataset
 
 1. **Market Size**: ~40,000 orders from ~30,000 unique customers across 15 Brazilian states
 2. **Peak Month**: April 2018 with ~4,600 delivered orders
@@ -202,7 +202,7 @@ The system uses a star schema design optimized for analytics:
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables (Optional)
 Create a `.env` file in the project root:
@@ -251,7 +251,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 🎯 Next Steps
+## Next Steps
 
 - **Monitor**: Use dashboards for ongoing performance tracking
 - **Analyze**: Explore notebooks for deeper insights

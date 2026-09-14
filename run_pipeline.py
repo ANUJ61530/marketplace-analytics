@@ -27,21 +27,21 @@ def main():
     print("-" * 80)
     success = generate_marketplace_dataset(num_orders=40000)
     if not success:
-        print("❌ Data generation failed.")
+        print("[ERROR] Data generation failed.")
         sys.exit(1)
-    print("✅ Data generation complete.\n")
+    print("[SUCCESS] Data generation complete.\n")
     
     # Step 2: Load into database
     print("\n[STEP 2/2] Loading data into database...")
     print("-" * 80)
     success = load_all_tables()
     if not success:
-        print("❌ Data loading failed.")
+        print("[ERROR] Data loading failed.")
         sys.exit(1)
-    print("✅ Data loading complete.\n")
+    print("[SUCCESS] Data loading complete.\n")
     
     print("=" * 80)
-    print("✅ PIPELINE COMPLETE — Database ready for analysis.")
+    print("[SUCCESS] PIPELINE COMPLETE — Database ready for analysis.")
     print("=" * 80)
     print("\nNext steps:")
     print("  1. Run notebooks: jupyter notebook notebooks/")

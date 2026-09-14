@@ -2,7 +2,7 @@
 
 A comprehensive analytics platform for monitoring and analyzing food delivery marketplace performance. Includes data generation, SQL analytics, Jupyter notebooks, and interactive Streamlit dashboards.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project demonstrates end-to-end analytics for a multi-vendor food delivery marketplace (Olist-inspired dataset). It features:
 
@@ -54,7 +54,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 📊 Dashboards & Analytics
+## Dashboards & Analytics
 
 ### Overview (01_overview.py)
 **Executive summary dashboard** — Quick view of marketplace health
@@ -223,7 +223,7 @@ resume_projecta/
 
 ---
 
-## 📈 Dataset Characteristics
+## Dataset Characteristics
 
 ### Volume
 - **Orders**: 40,000
@@ -267,7 +267,7 @@ resume_projecta/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables (Optional)
 Create `.env` file in project root to configure MySQL:
@@ -297,7 +297,7 @@ maxUploadSize = 500
 
 ---
 
-## 📊 Usage Scenarios
+## Usage Scenarios
 
 ### Scenario 1: Executive Briefing
 **Question**: "How did we perform last month?"
@@ -374,7 +374,7 @@ sqlite3 data/processed/marketplace.db
 
 ---
 
-## 🔧 Customization
+## Customization
 
 ### Add New Analysis Metric
 
@@ -459,11 +459,11 @@ This project is provided as-is for educational and demonstration purposes.
 
 ## 🚀 Next Steps
 
-1. ✅ **Run the pipeline** → `python run_pipeline.py`
-2. ✅ **Launch dashboard** → `streamlit run dashboard/app.py`
-3. ✅ **Explore notebooks** → `jupyter notebook notebooks/`
-4. 📊 **Perform custom analysis** → Write SQL in `sql/` files
-5. 📈 **Add new metrics** → Create dashboard pages in `dashboard/pages/`
+1. **Run the pipeline** → `python run_pipeline.py`
+2. **Launch dashboard** → `streamlit run dashboard/app.py`
+3. **Explore notebooks** → `jupyter notebook notebooks/`
+4. **Perform custom analysis** → Write SQL in `sql/` files
+5. **Add new metrics** → Create dashboard pages in `dashboard/pages/`
 
 ---
 

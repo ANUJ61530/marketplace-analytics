@@ -22,7 +22,7 @@ from src.db_connect import get_engine
 # Page config
 st.set_page_config(
     page_title="Marketplace Analytics",
-    page_icon="📊",
+    page_icon="📊"  # Metrics dashboard
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -49,7 +49,7 @@ def load_orders_data():
 try:
     df_orders, df_order_items, df_customers = load_orders_data()
 except Exception as e:
-    st.error(f"❌ Database connection failed: {e}")
+    st.error(f"Database connection failed: {e}")
     st.info("💡 Have you run the data pipeline? Execute: python run_pipeline.py")
     st.stop()
 
@@ -71,7 +71,7 @@ delivered = df_orders[df_orders['order_status'] == 'delivered'].copy()
 # ============================================================================
 # SIDEBAR FILTERS
 # ============================================================================
-st.sidebar.header("⚙️ Filters")
+st.sidebar.header("Filters")
 
 date_range = st.sidebar.date_input(
     "Select Date Range",
@@ -90,7 +90,7 @@ delivered_filtered = df_filtered[df_filtered['order_status'] == 'delivered'].cop
 # ============================================================================
 # KEY METRICS (KPI Cards)
 # ============================================================================
-st.header("📈 Executive Dashboard")
+st.header("Executive Dashboard")
 
 col1, col2, col3, col4 = st.columns(4)
 
@@ -130,7 +130,7 @@ with col4:
 # CHARTS SECTION 1: Time Series
 # ============================================================================
 st.divider()
-st.subheader("📊 Time Series Analysis")
+st.subheader("Time Series Analysis")
 
 col1, col2 = st.columns(2)
 
@@ -235,7 +235,7 @@ with col2:
 # DATA QUALITY MONITORING
 # ============================================================================
 st.divider()
-st.subheader("✅ Data Quality Metrics")
+st.subheader("Data Quality Metrics")
 
 col1, col2, col3 = st.columns(3)
 
