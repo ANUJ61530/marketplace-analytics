@@ -21,7 +21,7 @@ The dataset includes a realistic ~10% month-over-month revenue decline in May 20
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 ```bash
@@ -398,19 +398,7 @@ sqlite3 data/processed/marketplace.db
 
 ---
 
-## 🐛 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| "Database connection failed" | Run `python run_pipeline.py` to generate data |
-| "ModuleNotFoundError: No module named 'streamlit'" | Run `pip install -r requirements.txt` |
-| Charts not loading | Clear Streamlit cache: `streamlit cache clear` |
-| Slow dashboard on large dataset | Filter date range in sidebar |
-| SQLite database locked | Close other connections; SQLite has limited concurrency |
-
----
-
-## 📚 Documentation
+## Documentation
 
 ### Files to Review
 
@@ -426,48 +414,3 @@ Each SQL file documents specific business logic:
 - `02_marketplace_metrics.sql` — Monthly KPI calculations
 - `03_revenue_rca.sql` — Detailed decomposition model
 - `05_cohort_retention.sql` — Cohort survival analysis
-
----
-
-## 🎓 Learning Resources
-
-This project demonstrates:
-- **Data Engineering**: Synthetic data generation with realistic trends
-- **ETL Pipelines**: CSV ingestion, transformation, loading
-- **Data Modeling**: Star schema design with grain validation
-- **SQL Analytics**: Aggregations, window functions, cohort analysis
-- **Business Intelligence**: Dashboard design, metric definition
-- **Python**: Pandas, SQLAlchemy, Streamlit, Plotly
-- **Root Cause Analysis**: Three-factor revenue decomposition
-
----
-
-## 📄 License
-
-This project is provided as-is for educational and demonstration purposes.
-
----
-
-## 📞 Support & Questions
-
-- **Data Issues**: Check `docs/data_limitations.md`
-- **Dashboard Problems**: Review Streamlit logs: `streamlit run ... --logger.level=debug`
-- **SQL Errors**: Review schema in `sql/00_schema_setup.sql`
-- **General Questions**: See example narratives in `docs/experiment_proposal.md`
-
----
-
-## 🚀 Next Steps
-
-1. **Run the pipeline** → `python run_pipeline.py`
-2. **Launch dashboard** → `streamlit run dashboard/app.py`
-3. **Explore notebooks** → `jupyter notebook notebooks/`
-4. **Perform custom analysis** → Write SQL in `sql/` files
-5. **Add new metrics** → Create dashboard pages in `dashboard/pages/`
-
----
-
-**Project Last Updated**: 2026-09-14  
-**Python Version**: 3.8+  
-**Data Generation Method**: Synthetic (deterministic, reproducible)  
-**Database Support**: MySQL 8.0+, SQLite 3.0+
