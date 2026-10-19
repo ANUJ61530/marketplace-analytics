@@ -7,7 +7,7 @@ An analysis of real marketplace orders: how deliveries are going, whether late d
 
 This is an e-commerce marketplace, not a food delivery company. It is used because it has what a delivery platform tracks: order timestamps, promised delivery dates, actual delivery dates and customer reviews.
 
-The CSVs are not stored in this repo. Download the dataset from Kaggle and put these files in `data/raw/`:
+The six CSVs used are included in `data/raw/` (about 65MB), so the project runs without any download. They are an unmodified copy of the public dataset, shared under the same licence (CC BY-NC-SA 4.0) with credit to Olist. The original is on Kaggle if you want to check it:
 `olist_customers_dataset.csv`, `olist_orders_dataset.csv`, `olist_order_items_dataset.csv`, `olist_order_reviews_dataset.csv`, `olist_products_dataset.csv`, `product_category_name_translation.csv`
 
 ## Run it
